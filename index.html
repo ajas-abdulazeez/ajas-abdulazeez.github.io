@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajas Sajida - Software Engineer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        /* Style for the header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: max-content; /* Adjust to cover half of the viewport height */
+    padding: 1.5rem;
+    background-color: #007bff;
+    border-bottom: 2px solid white;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.profile-photo {
+    margin-bottom: 1rem;
+}
+
+.profile-photo img {
+    width: 150px; /* Adjust size as needed */
+    height: 150px; /* Adjust size as needed */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header-text h1 {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+    color: white;
+}
+
+.header-text p {
+    font-size: 1.2rem;
+    color: white;
+    margin: 0.5rem 0;
+}
+
+.info-chip {
+    display: flex;
+    align-items: center;
+    background-color: #e0e0e0;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin: 1rem 0;
+}
+
+.info-chip i {
+    margin-right: 0.5rem;
+    color: #007bff;
+}
+
+.notice-period {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: white;
+}
+
+.social-links {
+    margin: 1rem 0;
+}
+
+.social-icon {
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #f4f4f4;
+}
+
+.contact-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.contact-link:hover {
+    background-color: #0056b3;
+}
+
+        .container {
+            max-width: 1100px;
+            margin: 4rem auto;
+        }
+
+        h2.section-title {
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 1.5rem;
+        }
+
+/* Container for the entire timeline */
+.timeline {
+    position: relative;
+    margin-top: 2rem;
+    padding-left: 30px; /* Space for the vertical line */
+}
+
+/* Vertical line */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 15px;
+    width: 3px;
+    height: 100%;
+    background-color: #007bff;
+}
+
+/* Style for each experience block */
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 40px; /* Space for the content */
+}
+
+/* Circle marker for each experience */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 7px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 3px solid #007bff;
+}
+
+
+
+/* Remove the diagonal for the last item */
+.timeline-item:last-child::after {
+    display: none;
+}
+
+/* Style for the content of each block */
+.resume-item h4 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.resume-item h5 {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.resume-item p em {
+    font-size: 1rem;
+    color: #999;
+}
+
+.resume-item ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.resume-item ul li {
+    padding-left: 1.2rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.resume-item ul li::before {
+    content: "\f00c";
+    font-family: FontAwesome;
+    position: absolute;
+    left: 0;
+    color: #007bff;
+}
+
+/* Style for the summary section */
+.summary-section {
+    background-color: white;
+    color: black;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.summary-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.summary-section p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 800px; /* Adjust to control the width of the text block */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Style for the summary section */
+.summary-section {
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    margin: 2rem 0;
+    position: relative;
+}
+
+/* Style for the summary text */
+.summary-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.summary-section p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 800px; /* Adjust to control the width of the text block */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Style for the skills container */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem; /* Space between chips */
+    margin-top: 1.5rem;
+}
+
+/* Style for individual skill chips */
+.skill-chip {
+    background-color: #fff;
+    color: #007bff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    text-transform: capitalize;
+    display: inline-block;
+    white-space: nowrap;
+    border: 2px solid #007bff; /* Add border to match the background color */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .skill-chip {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+/* Style for the education section */
+.education-section {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.education-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+.education-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Style for the technology and skills section */
+.tech-skills-section {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.tech-skills-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+/* Style for the card container */
+.tech-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px; /* Reduced column gap to 1px */
+    justify-content: center;
+}
+
+/* Style for each card */
+.tech-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    flex: 1 1 calc(33.333% - 2px); /* 3 cards per row with reduced gap */
+    margin: 1px;
+    max-width: 300px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tech-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for card headings */
+.tech-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #007bff;
+}
+
+/* Style for card content */
+.tech-card p {
+    font-size: 1rem;
+    color: #333;
+}
+
+
+/* Style for the personality skills section */
+.personality-skills-section {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.personality-skills-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+/* Style for the skills container */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem; /* Space between tags */
+}
+
+/* Style for each skill tag */
+.skill-tag {
+    background-color: var(--tag-color);
+    color: #fff;
+    border-radius: 16px;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin: 0.25rem;
+    white-space: nowrap; /* Prevents text wrapping */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.skill-tag:hover {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+
+.projects-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: height 0.3s, transform 0.3s;
+}
+
+.project-header {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.project-summary {
+    font-size: 1em;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.dots {
+    display: inline;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.more {
+    display: none;
+    color: #333;
+}
+
+.read-more-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.launch-btn {
+    display: block;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+
+
+
+
+.hobbies-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.hobbies-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.hobbies-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.hobby-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.hobby-item:hover {
+    background-color: #e0f7fa;
+    transform: scale(1.05);
+}
+
+.hobby-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #00796b; /* Dark teal background */
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.hobby-item span {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.contact-section {
+    padding: 40px 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2em;
+}
+
+.contact-icon {
+    font-size: 1.5em;
+    color: #00796b; /* Dark teal color for the icons */
+}
+
+.contact-details {
+    color: #333;
+    text-decoration: none; /* Remove underline from links */
+}
+
+.contact-details:hover {
+    text-decoration: underline; /* Underline text on hover */
+}
+
+
+
+
+        .skills ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+
+        .skills ul li {
+            background: #007bff;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+            border-radius: 20px;
+            font-size: 1rem;
+        }
+
+        .testimonials {
+            background-color: #f0f0f0;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+
+        .testimonials h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-item {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-item p {
+            font-style: italic;
+            color: #555;
+        }
+
+        .testimonial-item h4 {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            color: #007bff;
+        }
+
+        footer {
+            text-align: center;
+            background: #007bff;
+            color: #fff;
+            padding: 1rem 0;
+        }
+
+        footer .social-icons a {
+            color: #fff;
+            margin: 0 0.5rem;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="profile-photo">
+                <img src="assets/img/profile.jpg" alt="Ajas Sajida">
+            </div>
+            <div class="header-text">
+                <h1>Ajas Sajida</h1>
+                <p>Software Engineer | Java Developer | Cloud Enthusiast</p>
+                <div class="info-chip">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Leicester, LE13AJ, United Kingdom</span>
+                </div>
+                <div class="notice-period">
+                    <span>Notice Period: Immediately Available</span>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/ajasabdulazeez" target="_blank" class="social-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/ajas-abdulazeez" target="_blank" class="social-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <a href="mailto:ajasasdev@gmail.com" class="contact-link">Contact Me</a>
+            </div>
+        </div>
+    </header>
+    
+
+    <div class="container">
+        <section class="summary-section">
+            <h2>Summary</h2>
+            <p>A detail-oriented Software Engineer with 3+ years of experience in Java-based backend development, cloud technologies, and DevOps. Skilled in optimizing APIs, enhancing performance, and managing databases. Adept at Agile methodologies, security measures, and innovative problem-solving. Committed to delivering high-quality solutions with a strong focus on collaboration and inclusivity.</p>
+            <div class="skills-container">
+                <div class="skill-chip">Java</div>
+                <div class="skill-chip">Spring Boot</div>
+                <div class="skill-chip">Cloud Technologies</div>
+                <div class="skill-chip">API Optimization</div>
+                <div class="skill-chip">Database Management</div>
+                <div class="skill-chip">Agile Methodologies</div>
+                <div class="skill-chip">DevOps</div>
+                <div class="skill-chip">Security Measures</div>
+                <div class="skill-chip">Problem Solving</div>
+                <div class="skill-chip">Collaboration</div>
+            </div>
+        </section>
+
+        <!-- Professional Experience Section -->
+        <section class="row experience-section" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-12">
+                <h2 class="section-title">Professional Experience</h2>
+            </div>
+            <div class="timeline">
+                <!-- First Experience -->
+                <div class="resume-item timeline-item">
+                    <h4>Full Stack Developer</h4>
+                    <h5>Feb, 2024 - Present</h5>
+                    <p><em>M2R2 Ltd, Derby, UK</em></p>
+                    <ul>
+                        <li>Integrated DJI action cameras for image processing MVP using IoT technologies.</li>
+                        <li>Reduced deployment time by 50% using AWS services and automation pipelines.</li>
+                        <li>Achieved 99.9% server uptime and a 30% reduction in storage costs using AWS S3.</li>
+                        <li>Implemented a responsive web solution using React.js and Spring Boot.</li>
+                    </ul>
+                </div>
+        
+                <!-- Second Experience -->
+                <div class="resume-item timeline-item">
+                    <h4>Software Engineer</h4>
+                    <h5>Dec, 2021 -  Mar, 2024</h5>
+                    <p><em>H&R Block, Trivandrum, India</em></p>
+                    <ul>
+                        <li>Decoupled CI/CD pipelines via Helm and Kubernetes, reducing deployment time by 66%.</li>
+                        <li>Developed secure APIs with Spring Security, JWT, and OAuth, enhancing authentication.</li>
+                        <li>Optimized SQL queries in PostgreSQL, reducing query execution time by 50%.</li>
+                        <li>Reduced Docker setup time from 30 minutes to 5 minutes, improving efficiency.</li>
+                    </ul>
+                </div>
+        
+                <!-- Third Experience -->
+                <div class="resume-item timeline-item">
+                    <h4>Full Stack Developer Intern</h4>
+                    <h5>Aug 2021 - Oct 2021</h5>
+                    <p><em>Ionaught Technologies, India</em></p>
+                    <ul>
+                        <li>Developed an e-commerce web app using React.js for the frontend and Node.js for the backend.</li>
+                        <li>Integrated REST APIs, ensuring timely project delivery and a 20% increase in client retention.</li>
+                        <li>Improved UI responsiveness by 25% and enhanced user experience.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="education-section" data-aos="fade-up" data-aos-delay="400">
+            <h2>Education History</h2>
+            <div class="education-timeline">
+                <div class="">
+                    <div class="timeline-content">
+                        <h3>Bachelor of Technology: Computer Science & Engineering</h3>
+                        <p><em>APJ Abdul Kalam Technological University, India</em></p>
+                        <p>08/2017 - 06/2021</p>
+                        <p>Distinction</p>
+                    </div>
+                </div>
+                <!-- Add more timeline items here if needed -->
+            </div>
+        </section>
+        
+        <section class="tech-skills-section" data-aos="fade-up" data-aos-delay="400">
+            <h2>Technical Skills</h2>
+            <div class="tech-card-container">
+                <div class="tech-card">
+                    <h3>Technologies</h3>
+                    <p>Java, Java 8+, Java SE, Java 11+, Java 17+, Spring Boot, MVC, Web API (REST), JSON, XML, XSD, SOAP, Swagger API, Stripe API</p>
+                </div>
+                <div class="tech-card">
+                    <h3>Web Scripting</h3>
+                    <p>HTML, CSS, JavaScript, React.js, Angular (learning)</p>
+                </div>
+                <div class="tech-card">
+                    <h3>SQL / NoSQL Databases</h3>
+                    <p>Postgres, MySQL, MongoDB</p>
+                </div>
+                <div class="tech-card">
+                    <h3>Testing</h3>
+                    <p>Mockito, JUnit</p>
+                </div>
+                <div class="tech-card">
+                    <h3>Cloud Services</h3>
+                    <p>AWS, Azure</p>
+                </div>
+                <div class="tech-card">
+                    <h3>Azure Services</h3>
+                    <p>Azure Kubernetes Service (AKS), Azure Database for PostgreSQL, Azure DevOps, Container Registry, Key Vault, Resource Manager</p>
+                </div>
+                <div class="tech-card">
+                    <h3>AWS Services</h3>
+                    <p>AWS Pinpoint, ECS, EC2, SES, RDS, S3, AWS CLI</p>
+                </div>
+                <div class="tech-card">
+                    <h3>Monitoring Tools</h3>
+                    <p>NewRelic, Portrainer</p>
+                </div>
+                <div class="tech-card">
+                    <h3>Frameworks</h3>
+                    <p>Spring Boot, Spring Security, Spring Cloud, Spring Data JPA, Spring Batch</p>
+                </div>
+                <div class="tech-card">
+                    <h3>Server</h3>
+                    <p>AWS EC2/ECS, Azure Kubernetes Services, Heroku, Render, Oracle</p>
+                </div>
+                <div class="tech-card">
+                    <h3>Architecture</h3>
+                    <p>Monolithic, Microservices, Modulithic</p>
+                </div>
+                <div class="tech-card">
+                    <h3>Version Control</h3>
+                    <p>Git</p>
+                </div>
+                <div class="tech-card">
+                    <h3>Build Tools</h3>
+                    <p>Gradle, Maven</p>
+                </div>
+                <div class="tech-card">
+                    <h3>Productivity Tools</h3>
+                    <p>Docker, VS Code, IntelliJ, GitHub, GitLab, GitHub Actions, Ubuntu, CMD, PowerShell, DBeaver, Postman, Jira, Confluence, Outlook</p>
+                </div>
+                <div class="tech-card">
+                    <h3>Concepts</h3>
+                    <p>OOPs, SOLID Principles</p>
+                </div>
+                <div class="tech-card">
+                    <h3>SDLC</h3>
+                    <p>Waterfall Methodologies, Agile (Scrum, Kanban)</p>
+                </div>
+                <div class="tech-card">
+                    <h3>Others</h3>
+                    <p>Zendesk</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="personality-skills-section" data-aos="fade-up" data-aos-delay="400">
+            <h2>Personality Skills</h2>
+            <div class="skills-container">
+                <span class="skill-tag" style="--tag-color: #007bff;">Problem Solving</span>
+                <span class="skill-tag" style="--tag-color: #28a745;">New Employee Mentoring</span>
+                <span class="skill-tag" style="--tag-color: #dc3545;">Team Collaboration</span>
+                <span class="skill-tag" style="--tag-color: #ffc107;">Product Management</span>
+                <span class="skill-tag" style="--tag-color: #17a2b8;">Project Management</span>
+                <span class="skill-tag" style="--tag-color: #fd7e14;">Critical Thinking</span>
+                <span class="skill-tag" style="--tag-color: #6f42c1;">Continuous Learning</span>
+                <span class="skill-tag" style="--tag-color: #e83e8c;">Analytical Thinking</span>
+                <span class="skill-tag" style="--tag-color: #20c997;">Adaptability</span>
+                <span class="skill-tag" style="--tag-color: #007bff;">Flexible</span>
+                <span class="skill-tag" style="--tag-color: #28a745;">Product Roadmap</span>
+                <span class="skill-tag" style="--tag-color: #dc3545;">Product Strategy</span>
+                <span class="skill-tag" style="--tag-color: #ffc107;">Presentation Skills</span>
+                <span class="skill-tag" style="--tag-color: #17a2b8;">Attention to Detail</span>
+                <span class="skill-tag" style="--tag-color: #fd7e14;">Excellent Communication</span>
+                <span class="skill-tag" style="--tag-color: #6f42c1;">Highly Motivated</span>
+                <span class="skill-tag" style="--tag-color: #e83e8c;">Delivering</span>
+                <span class="skill-tag" style="--tag-color: #20c997;">Drive</span>
+                <span class="skill-tag" style="--tag-color: #007bff;">Product Development Process</span>
+                <span class="skill-tag" style="--tag-color: #28a745;">Quality Assurance</span>
+                <span class="skill-tag" style="--tag-color: #dc3545;">Passion</span>
+                <span class="skill-tag" style="--tag-color: #ffc107;">Ability to Train</span>
+                <span class="skill-tag" style="--tag-color: #17a2b8;">Multi-tasking</span>
+                <span class="skill-tag" style="--tag-color: #fd7e14;">Creative</span>
+                <span class="skill-tag" style="--tag-color: #6f42c1;">Decision Making</span>
+                <span class="skill-tag" style="--tag-color: #e83e8c;">Work Independently</span>
+                <span class="skill-tag" style="--tag-color: #20c997;">Troubleshooting</span>
+                <span class="skill-tag" style="--tag-color: #007bff;">Building Relationships</span>
+                <span class="skill-tag" style="--tag-color: #28a745;">Time Management</span>
+                <span class="skill-tag" style="--tag-color: #dc3545;">Stakeholder Management</span>
+                <span class="skill-tag" style="--tag-color: #ffc107;">Negotiation Skills</span>
+                <span class="skill-tag" style="--tag-color: #17a2b8;">Entrepreneurial Spirit</span>
+                <span class="skill-tag" style="--tag-color: #fd7e14;">Big Picture</span>
+                <span class="skill-tag" style="--tag-color: #6f42c1;">Responsive</span>
+                <span class="skill-tag" style="--tag-color: #e83e8c;">Minimal Supervision</span>
+                <span class="skill-tag" style="--tag-color: #20c997;">Customer Support</span>
+                <span class="skill-tag" style="--tag-color: #007bff;">Leadership</span>
+                <span class="skill-tag" style="--tag-color: #28a745;">Project Documentation</span>
+                <span class="skill-tag" style="--tag-color: #dc3545;">Prioritizing</span>
+                <span class="skill-tag" style="--tag-color: #ffc107;">Sound Judgement</span>
+                <span class="skill-tag" style="--tag-color: #17a2b8;">Reasonable</span>
+            </div>
+        </section>
+
+        <!-- Your project section -->
+    <section class="projects-section" data-aos="fade-up" data-aos-delay="400">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <!-- Project Card 1 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Boss - Ecommerce Platform Provider (MVP)</h3>
+                    <span>02/2024 - Present</span>
+                </div>
+                <p class="project-summary">
+                    Boss is an e-commerce platform provider designed to empower businesses to easily create and manage their online stores.
+                </p>
+                <div class="project-details">
+                    <p>
+                        Built from scratch, integrated with Stripe API for payment processing, Amazon Delivery for logistics, and all essential e-commerce features. 
+                        Technologies used include Java Spring Boot, Microservices, ReactJS, PostgreSQL, and more.
+                        <span id="dots">Read More</span><span id="more"></span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Frontend Web - Drone Solutions</h3>
+                    <span>02/2024 - 04/2024</span>
+                </div>
+                <p class="project-summary">
+                    A landing page for Drone solutions at M2R2 Ltd (worked on Frontend Technology - ReactJS).
+                    <span id="dots">Read More...</span><span id="more">
+                </p>
+                <div class="project-details">
+                    <p>
+                        Developed a responsive landing page using ReactJS to showcase drone solutions. Focused on clean design and user engagement.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Canada DIY - Associated with H & R Block (India)</h3>
+                    <span>07/2022 - 03/2024</span>
+                </div>
+                <p class="project-summary">
+                    Tax preparation app for Canada, with on-demand help from tax experts.<span id="dots">Read More...</span><span id="more"></span>
+                </p>
+                <div class="project-details">
+                    <p>
+                        Worked on backend technologies including Spring Boot, Microservices, Docker, and Kubernetes to develop a tax preparation app for Canada.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                    <div class="project-header">
+                        <h3>Australia DIY - Associated with H & R Block (India)</h3>
+                        <span>12/2021 - 03/2023</span>
+                    </div>
+                    <p class="project-summary">
+                        Tax preparation app for Australia, with on-demand help from tax experts.<span id="dots">Read More...</span><span id="more"></span>
+                    </p>
+                    <div class="project-details">
+                        <p>
+                            Developed backend technologies with Spring Boot, Microservices, AWS, and Spring Security for authentication and authorization.
+                        </p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Talent Health - Associated with IONAUGHT Technologies</h3>
+                        <span>09/2021 - 10/2021</span>
+                    </div>
+                    <p class="project-summary">
+                        Hospital staffing and outsourcing software for an Australian client.<span id="dots">Read More...</span><span id="more"></span>
+                    </p>
+                    <div class="project-details">
+                        <p>
+                            Created a full-stack web application using ReactJS, NodeJS, and MongoDB from scratch.
+                        </p>
+                    </div>
+                </div>
+                <div class="project-card hidden">
+                    <div class="project-header">
+                        <h3>Ekart - Ecommerce Application</h3>
+                        <span>08/2021 - 10/2021</span>
+                    </div>
+                    <p class="project-summary">
+                        Custom-built e-commerce application to connect consumers directly with sellers.<span id="dots">Read More...</span><span id="more"></span>
+                    </p>
+                    <div class="project-details">
+                        <p>
+                            Developed using ReactJS, MongoDB, and NodeJS to facilitate seamless product negotiations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    
+
+    <section class="hobbies-section" data-aos="fade-up" data-aos-delay="400">
+        <h2>Hobbies</h2>
+        <div class="hobbies-container">
+            <div class="hobby-item">
+                <div class="hobby-icon">V</div>
+                <span>Video Editing</span>
+            </div>
+            <div class="hobby-item">
+                <div class="hobby-icon">F</div>
+                <span>Filmmaking</span>
+            </div>
+            <!-- Add more hobby items as needed -->
+        </div>
+    </section>
+    
+        
+        
+
+        <!-- Testimonials Section -->
+        <section class="testimonials" data-aos="fade-up" data-aos-delay="400">
+            <h3>Testimonials</h3>
+
+            <div class="testimonial-item">
+                <p>"Ajas is Technically skilled for his experience a quick learner based on the requirement and an excellent team player. The course of time during which I worked with Ajas was great and wish him best for his future endeavours."</p>
+                <h4>Vineet G Nair, Lead Software Engineer at H&R Block</h4>
+            </div>
+
+            <div class="testimonial-item">
+                <p>"Ajas is a fast learner and enthusiastic person.His problem solving skill is exceptionally well. I have had a great time working with Ajas."</p>
+                <h4>Mila Stephen, Software Developer at MiClub - PA, Werth</h4>
+            </div>
+        </section>
+    </div>
+        <section class="contact-section">
+            <h2>Contact Me</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt contact-icon"></i>
+                    <span class="contact-details">+44-7586578997</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope contact-icon"></i>
+                    <a href="mailto:ajasasdev@gmail.com" class="contact-details">ajasasdev@gmail.com</a>
+                </div>
+            </div>
+        </section>
+        
+    
+
+    <footer>
+        <p>© 2024 Ajas Sajida. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/ajasabdulazeez" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/ajas-abdulazeez" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+    <script>
+       
+        document.querySelectorAll('.read-more-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const card = this.closest('.project-card');
+                const dots = card.querySelector('.dots');
+                const moreText = card.querySelector('.more');
+                const btnText = this;
+
+                if (dots.style.display === "none") {
+                    dots.style.display = "inline";
+                    btnText.innerHTML = "Read More";
+                    moreText.style.display = "none";
+                } else {
+                    dots.style.display = "none";
+                    btnText.innerHTML = "Read Less";
+                    moreText.style.display = "inline";
+                }
+            });
+        });
+
+
+
+        // JavaScript for showing more projects
+        document.getElementById('show-more-btn').addEventListener('click', function() {
+            const hiddenProjects = document.querySelectorAll('.more-projects .project-card.hidden');
+            hiddenProjects.forEach(project => project.classList.remove('hidden'));
+            this.style.display = 'none'; // Hide the button after clicking
+        });
+    </script>
+
+
+
+
+    <!-- JS and Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
