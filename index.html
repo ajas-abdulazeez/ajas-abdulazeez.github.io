@@ -22,6 +22,10 @@
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f8f8f8;
+            width: 100%;
+            overflow-x: hidden; /* This should already prevent horizontal scrolling */
+            margin: 0; /* Ensure no default margin on the body */
+            padding: 0; /* Ensure no default padding on the body */
         }
 
         /* Style for the header */
@@ -294,7 +298,8 @@ header {
     background-color: #f9f9f9;
     text-align: center;
     border-radius: 8px;
-    margin: 2rem 0;
+    margin: auto;
+    width:96%
 }
 
 .education-section h2 {
@@ -651,6 +656,8 @@ header {
     overflow-x: auto;
     scroll-behavior: smooth;
     padding: 10px 0;
+    gap:10px;
+    width: 100%;
 }
 
 .strengths-carousel::-webkit-scrollbar {
@@ -673,11 +680,22 @@ header {
     color: #333;
     text-align: center;
     transition: background-color 0.3s ease;
+    overflow: hidden; /* Prevents overflow if text is too long */
 }
 
 .strengths-card:hover {
     background-color: #b2ebf2;
 }
+
+@media (max-width: 300px) {
+    .strengths-card {
+        padding: 2px;
+        height:max-content;
+        width: 100%; /* Set width to 100% on small screens */
+        margin: 10px 0; /* Optional: Adjust margin for better spacing */
+    }
+}
+
 
 
 .leetcode-dialogue {
@@ -723,7 +741,8 @@ header {
     background-color: #222; /* Dark card background */
     padding: 20px;
     border-radius: 8px;
-    width: 300px;
+    max-width: 300px;
+    width: max-content;
     box-shadow: 0 4px 6px rgba(255, 215, 0, 0.5); /* Gold shadow effect */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -758,6 +777,7 @@ header {
 .languages-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 15px;
 }
 
@@ -846,6 +866,13 @@ header {
                 font-size: 1rem;
             }
         }
+
+        @media (max-width: 300px) {
+    .container {
+            width: 98%;
+            margin: auto;
+        }
+}
     </style>
 </head>
 <body>
