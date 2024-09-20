@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2FN83BQFFK"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-2FN83BQFFK');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -65,7 +74,8 @@ header {
     background-color: #e0e0e0;
     padding: 0.5rem 1rem;
     border-radius: 20px;
-    margin: 1rem 0;
+    margin: auto;
+    width: max-content;
 }
 
 .info-chip i {
@@ -562,6 +572,209 @@ header {
 }
 
 
+/* LeetCode Progress Section */
+/* LeetCode Progress Section */
+.leetcode-progress-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+}
+
+.leetcode-progress-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.progress-container {
+    display: inline-block;
+    position: relative;
+    margin-top: 20px;
+}
+
+.progress-container {
+    display: inline-block;
+    position: relative;
+    margin-top: 20px;
+}
+
+.circular-progress {
+    width: 150px;
+    height: 150px;
+    background: conic-gradient(#4caf50 calc(106 / 150 * 360deg), #d3d3d3 0deg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.circular-progress::before {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.progress-value {
+    position: relative;
+    font-size: 2.5em;
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.progress-description {
+    margin-top: 15px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+
+
+
+/* Strengths Section */
+.strengths-section {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.strengths-section h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.strengths-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+}
+
+.strengths-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.strengths-card {
+    flex: 0 0 auto;
+    background-color: #e0f7fa;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 0 10px;
+    width: 40%;
+    min-height: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.strengths-card:hover {
+    background-color: #b2ebf2;
+}
+
+
+.leetcode-dialogue {
+    text-align: center;
+    font-size: 1rem;
+    color: #333;
+    margin-top: 20px;
+}
+
+.leetcode-dialogue p {
+    margin: 0;
+    padding: 0;
+}
+
+.leetcode-dialogue span {
+    color: #4caf50;
+    font-style: italic;
+}
+
+.awards-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: gold; /* Golden title color */
+}
+
+.trophy-icon {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.awards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.award-card {
+    background-color: #222; /* Dark card background */
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(255, 215, 0, 0.5); /* Gold shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.award-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(255, 215, 0, 0.7); /* Darker shadow on hover */
+}
+
+.award-card h3 {
+    font-size: 1.5rem;
+    color: gold; /* Golden title color */
+    margin-bottom: 5px;
+}
+
+.award-card p {
+    font-size: 1rem;
+    color: silver;
+}
+
+.languages-section {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: gold; /* Golden title color */
+    margin-bottom: 20px;
+}
+
+.languages-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.language-item {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    background-color: #333; /* Dark item background */
+    color: white; /* White text */
+    border-radius: 25px; /* Rounded corners */
+    transition: background-color 0.3s ease;
+}
+
+.language-item:hover {
+    background-color: gold; /* Change to gold on hover */
+    color: black; /* Change text color on hover */
+}
+
 
 
         .skills ul {
@@ -683,6 +896,62 @@ header {
                 <div class="skill-chip">Collaboration</div>
             </div>
         </section>
+        <section class="leetcode-progress-section" data-aos="fade-up" data-aos-delay="200">
+            <h2>Problem Solver</h2>
+            <div class="progress-container">
+                <div class="circular-progress" id="progress-circle">
+                    <span class="progress-value" id="progress-value">106</span>
+                </div>
+            </div>
+            <div class="leetcode-dialogue">
+                <p>106 <span style="color: orange; font-weight: bold;">LeetCode</span> problems solved, <span>still counting...</span></p>
+
+            </div>        
+            <!-- Experience and Key Strengths Section -->
+            <div class="strengths-section" data-aos="fade-up" data-aos-delay="200">
+                <h3>Experience and Key Strengths</h3>
+                <div class="strengths-carousel">
+                    <div class="strengths-card">
+                        <p>Proficient in Java-based backend development using Spring Boot and microservices architecture.</p>
+                    </div>
+                    <div class="strengths-card">
+                        <p>Skilled in cloud technologies and DevOps, with hands-on experience in Azure DevOps, Docker, and Kubernetes.</p>
+                    </div>
+                    <div class="strengths-card">
+                        <p>Expertise in optimizing APIs and RESTful services to enhance performance and reduce response times.</p>
+                    </div>
+                    <div class="strengths-card">
+                        <p>Strong experience in database optimization and management, particularly with PostgreSQL, to improve system efficiency.</p>
+                    </div>
+                    <div class="strengths-card">
+                        <p>Demonstrated leadership in code review processes, ensuring alignment with best practices and project goals.</p>
+                    </div>
+                    <div class="strengths-card">
+                        <p>Committed to Agile methodologies, actively participating in Scrum and continuous integration/delivery to streamline development cycles.</p>
+                    </div>
+                    <div class="strengths-card">
+                        <p>Effective collaborator with a focus on inclusivity and teamwork, fostering a supportive and innovative work environment.</p>
+                    </div>
+                    <div class="strengths-card">
+                        <p>Proven track record of implementing security measures, including Spring Security, JWT, and OAuth for robust authentication.</p>
+                    </div>
+                    <div class="strengths-card">
+                        <p>Adept at innovative problem-solving, successfully integrating new technologies to enhance user experience and operational efficiency.</p>
+                    </div>
+                    <div class="strengths-card">
+                        <p>Strong sense of responsibility and accountability, consistently delivering reliable, high-quality solutions while adhering to project timelines.</p>
+                    </div>
+                    <div class="strengths-card">
+                        <p>Practiced Test-Driven Development (TDD) and Behavior-Driven Development (BDD) to ensure robust and reliable software solutions.</p>
+                    </div>
+                    <div class="strengths-card">
+                        <p>Advocated for inclusivity and diversity within the team, contributing to a supportive and innovative work environment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
 
         <!-- Professional Experience Section -->
         <section class="row experience-section" data-aos="fade-up" data-aos-delay="200">
@@ -693,12 +962,12 @@ header {
                 <!-- First Experience -->
                 <div class="resume-item timeline-item">
                     <h4>Full Stack Developer</h4>
-                    <h5>Feb, 2024 - Present</h5>
+                    <h5>Feb, 2024 - Present <span style="color: rgb(156, 154, 154);">(8 Months)</span></h5>
                     <p><em>M2R2 Ltd, Derby, UK</em></p>
                     <ul>
-                        <li>Integrated DJI action cameras for image processing MVP using IoT technologies.</li>
-                        <li>Reduced deployment time by 50% using AWS services and automation pipelines.</li>
-                        <li>Achieved 99.9% server uptime and a 30% reduction in storage costs using AWS S3.</li>
+                        <li>Created an MVP for an e-commerce platform within a tight 6-month schedule, enabling businesses to easily set up online stores.</li>
+                        <li>Led a team of three in the complete design and development of the MVP, ensuring timely delivery and high quality.</li>
+                        <li>Designed and developed a responsive website within a 1-month deadline, receiving positive feedback from stakeholders for its functionality and user experience.</li>
                         <li>Implemented a responsive web solution using React.js and Spring Boot.</li>
                     </ul>
                 </div>
@@ -706,20 +975,21 @@ header {
                 <!-- Second Experience -->
                 <div class="resume-item timeline-item">
                     <h4>Software Engineer</h4>
-                    <h5>Dec, 2021 -  Mar, 2024</h5>
+                    <h5>Dec, 2021 -  Mar, 2024 <span style="color: rgb(156, 154, 154);">(2 yrs 4 months)</span></h5>
                     <p><em>H&R Block, Trivandrum, India</em></p>
                     <ul>
                         <li>Decoupled CI/CD pipelines via Helm and Kubernetes, reducing deployment time by 66%.</li>
                         <li>Developed secure APIs with Spring Security, JWT, and OAuth, enhancing authentication.</li>
                         <li>Optimized SQL queries in PostgreSQL, reducing query execution time by 50%.</li>
-                        <li>Reduced Docker setup time from 30 minutes to 5 minutes, improving efficiency.</li>
+                        <li>Collaborated with cross-functional teams to implement key features, enhancing user experience and streamlining project workflows.</li>
+                        <li>Resolved over 200 client-facing technical issues during the 2023-2024 tax season, ensuring seamless user experiences and high satisfaction levels.</li>
                     </ul>
                 </div>
         
                 <!-- Third Experience -->
                 <div class="resume-item timeline-item">
                     <h4>Full Stack Developer Intern</h4>
-                    <h5>Aug 2021 - Oct 2021</h5>
+                    <h5>Aug 2021 - Oct 2021 <span style="color: rgb(156, 154, 154);">(3 Months)</span></h5>
                     <p><em>Ionaught Technologies, India</em></p>
                     <ul>
                         <li>Developed an e-commerce web app using React.js for the frontend and Node.js for the backend.</li>
@@ -884,8 +1154,12 @@ header {
                     <p>
                         Built from scratch, integrated with Stripe API for payment processing, Amazon Delivery for logistics, and all essential e-commerce features. 
                         Technologies used include Java Spring Boot, Microservices, ReactJS, PostgreSQL, and more.
-                        <span id="dots">Read More</span><span id="more"></span>
                     </p>
+                    <p>Implemented rate limiting for OTP requests, significantly reducing server load and enhancing overall system performance.
+                    </p>
+                    <p>Implemented Git for version control to facilitate seamless team collaboration and ensure efficient
+                        code management.</p>
+                    <p>Integrated AWS SES for transactional and marketing emails, optimizing content and targeting strategies, which led to a 25% increase in open rates</p>
                 </div>
             </div>
 
@@ -897,12 +1171,13 @@ header {
                 </div>
                 <p class="project-summary">
                     A landing page for Drone solutions at M2R2 Ltd (worked on Frontend Technology - ReactJS).
-                    <span id="dots">Read More...</span><span id="more">
                 </p>
                 <div class="project-details">
                     <p>
                         Developed a responsive landing page using ReactJS to showcase drone solutions. Focused on clean design and user engagement.
                     </p>
+                    <p>Reduce code conflicts by 40% through effective utilization of Git branching strategies and merge
+                        requests.</p>
                 </div>
             </div>
 
@@ -913,12 +1188,25 @@ header {
                     <span>07/2022 - 03/2024</span>
                 </div>
                 <p class="project-summary">
-                    Tax preparation app for Canada, with on-demand help from tax experts.<span id="dots">Read More...</span><span id="more"></span>
+                    Tax preparation app for Canada, with on-demand help from tax experts.
                 </p>
                 <div class="project-details">
                     <p>
-                        Worked on backend technologies including Spring Boot, Microservices, Docker, and Kubernetes to develop a tax preparation app for Canada.
+                        Worked on backend technologies including Spring Boot, Microservices, Docker, and Kubernetes.
                     </p>
+                    <p>DecoupledAzureCI/CD pipelines via Helm Kubernetes package manager, drastically reducing
+                        deployment time by 66%, slashing management hours by 75%, and curtailing maintenance
+                        efforts by 66%. This empowered independent updates across various components, achieving a
+                        50-fold acceleration in the update cycle.</p>
+                    <p>Orchestrated Azure libraries and Variable Groups to optimize resource management and
+                        configurations, leading to a 40% decrease in configuration errors and a 25% improvement in
+                        deployment efficiency.</p>
+                    <p>Leveraged unit test cases with Mockito and JUnit, resulting in a 25% decrease in
+                        post-deployment issues, elevating code reliability, and increasing code coverage by 30%.</p>
+                    <p>Achievedsystem stability by monitoring New Relic and Kubernetes pod logs, reducing mean time
+                        to resolution (MTTR) by 15% for critical incidents and facilitating swift responses to system
+                        discrepancies.
+                       </p>
                 </div>
             </div>
             
@@ -928,12 +1216,23 @@ header {
                         <span>12/2021 - 03/2023</span>
                     </div>
                     <p class="project-summary">
-                        Tax preparation app for Australia, with on-demand help from tax experts.<span id="dots">Read More...</span><span id="more"></span>
+                        Tax preparation app for Australia, with on-demand help from tax experts.
                     </p>
                     <div class="project-details">
                         <p>
-                            Developed backend technologies with Spring Boot, Microservices, AWS, and Spring Security for authentication and authorization.
+                        Worked on backend development using Java Spring Boot, microservices, AWS & PostgreSQL</p>
+                        <P>Actively participated in feature implementation, delivering new functionalities, enhancements,
+                            and bug fixes, aligned with customer needs.</P>
+                        <p>Resolved 200+ client-facing technical issues during the 2023-2024 tax season, enhancing user experience and driving high customer satisfaction.</p>
+                        <p>Implemented biometric authentication, resulting in a 30% faster login process, vastly improving
+                            ease of access and customer satisfaction.</p>
+                        <p>Worked with Spring Security for authorizations and authentications, particularly focusing on JWT
+                            tokens and OAuth.</p>
+                        <p>Leveragedrelational databases, SQL, and ORM technologies (JPA2, Hibernate) to improve data
+                            retrieval, reducing query time by 20% and enhancing database performance.</p>
+                        <p> Managed SwaggerAPI documentation, reducing developer onboarding time by 25%.
                         </p>
+
                     </div>
                 </div>
                 <div class="project-card">
@@ -942,7 +1241,7 @@ header {
                         <span>09/2021 - 10/2021</span>
                     </div>
                     <p class="project-summary">
-                        Hospital staffing and outsourcing software for an Australian client.<span id="dots">Read More...</span><span id="more"></span>
+                        Hospital staffing and outsourcing software for an Australian client.
                     </p>
                     <div class="project-details">
                         <p>
@@ -956,7 +1255,7 @@ header {
                         <span>08/2021 - 10/2021</span>
                     </div>
                     <p class="project-summary">
-                        Custom-built e-commerce application to connect consumers directly with sellers.<span id="dots">Read More...</span><span id="more"></span>
+                        Custom-built e-commerce application to connect consumers directly with sellers.
                     </p>
                     <div class="project-details">
                         <p>
@@ -966,6 +1265,35 @@ header {
                 </div>
             </div>
     </section>
+
+    <!-- Awards & Recognitions Section -->
+<section id="awards" class="awards-section" data-aos="fade-up" data-aos-delay="200">
+    <h2 class="section-title">
+        <span class="trophy-icon">🏆</span> Awards & Recognitions
+    </h2>
+    <div class="awards-container">
+        <!-- Award 1 -->
+        <div class="award-card">
+            <h3>Beyond the Call of Duty</h3>
+            <p>(In association with H&R Block)</p>
+            <p>For putting good effort to learn the front end, dive deep into Zendesk items, work with products towards implementation, develop deployment pipelines, and ensure availability even on weekends and late nights during the peak cert season.</p>
+        </div>
+        <!-- Award 2 -->
+        <div class="award-card">
+            <h3>ACE Team Award (2 times)</h3>
+            <p>(In association with H&R Block)</p>
+            <p>For excellent effort in the successful production rollout of Australia DIY and UI revamp within a short timeframe, responding quickly to business requirements to support the Australian tax season.</p>
+        </div>
+        <!-- Award 3 -->
+        <div class="award-card">
+            <h3>CURIOUS (2 times)</h3>
+            <p>(In association with H&R Block)</p>
+            <p>For expanding skill sets and decoupling the release pipelines of Canada DIY, demonstrating curiosity and initiative in advancing technology implementations.</p>
+        </div>
+    </div>
+</section>
+
+
 
 
     
@@ -984,6 +1312,18 @@ header {
             <!-- Add more hobby items as needed -->
         </div>
     </section>
+
+
+        <!-- Languages Section -->
+    <section id="languages" class="languages-section" data-aos="fade-up" data-aos-delay="200">
+        <h2 class="section-title">Languages</h2>
+        <div class="languages-container">
+            <div class="language-item">🇬🇧 English</div>
+            <div class="language-item">🇮🇳 Malayalam</div>
+            <div class="language-item">🇮🇳 Hindi</div>
+        </div>
+    </section>
+
     
         
         
@@ -1056,6 +1396,33 @@ header {
             hiddenProjects.forEach(project => project.classList.remove('hidden'));
             this.style.display = 'none'; // Hide the button after clicking
         });
+        document.addEventListener("DOMContentLoaded", function() {
+        let targetValue = 106;  // Target LeetCode solved problem count
+        let currentValue = 0;   // Start at 0
+        let progressCircle = document.getElementById("progress-circle");
+        let progressValueElement = document.getElementById("progress-value");
+        
+        // Animate the progress bar from 0 to target value
+        function animateProgress() {
+        let progressInterval = setInterval(() => {
+            if (currentValue >= targetValue) {
+                clearInterval(progressInterval);
+            } else {
+                currentValue++;
+                progressValueElement.textContent = currentValue;
+
+                let angle = (currentValue / 150) * 360;  // Assuming the full value is 150 problems solved
+                progressCircle.style.background = `conic-gradient(#4caf50 ${angle}deg, #d3d3d3 ${angle}deg)`;
+            }
+                }, 20);  // Adjust speed of the animation here
+        }
+
+            // Call the function to start the animation when the page is loaded
+        animateProgress();
+        });
+
+
+        
     </script>
 
 
