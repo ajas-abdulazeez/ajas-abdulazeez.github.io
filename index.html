@@ -664,29 +664,6 @@ header {
     display: none;
 }
 
-.strengths-card {
-    flex: 0 0 auto;
-    background-color: #e0f7fa;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 0 10px;
-    width: 40%;
-    min-height: 150px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 1.1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #333;
-    text-align: center;
-    transition: background-color 0.3s ease;
-    overflow: hidden; /* Prevents overflow if text is too long */
-}
-
-.strengths-card:hover {
-    background-color: #b2ebf2;
-}
-
 @media (max-width: 300px) {
     .strengths-card {
         padding: 2px;
@@ -857,6 +834,110 @@ header {
             font-size: 1.5rem;
         }
 
+        .mySlides {
+  display: flex;
+  background-color: #e0f7fa;
+  border-radius: 20px;
+  height: max-content;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  padding: 30px;
+  margin: 20px 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  font-size: 1.1em;
+    color: #333;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    overflow: hidden; /* Prevents overflow if text is too long */
+
+}
+
+.swiper-card-content{
+    width: 80%;
+}
+
+.slideshow-container {
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  width: auto;
+  padding: 16px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: blue;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+  .mySlides {
+  max-width: 100%;
+  padding: 2px 1px;
+  margin: 20px 0;
+}
+
+.dot {
+  height: 4px;
+  width: 4px;
+  margin: 0 1px;
+}
+
+
+.prev, .next {
+    display: none;
+  }
+
+}
         @media (max-width: 768px) {
             header h1 {
                 font-size: 1.8rem;
@@ -864,6 +945,13 @@ header {
 
             header p {
                 font-size: 1rem;
+            }
+            .dot {
+                height: 8px;
+                width: 8px;
+                }
+                .prev, .next {
+                display: none;
             }
         }
 
@@ -933,49 +1021,34 @@ header {
             <div class="leetcode-dialogue">
                 <p>106 <span style="color: orange; font-weight: bold;">LeetCode</span> problems solved, <span>still counting...</span></p>
 
-            </div>        
+            </div>      
             <!-- Experience and Key Strengths Section -->
             <div class="strengths-section" data-aos="fade-up" data-aos-delay="200">
                 <h3>Experience and Key Strengths</h3>
-                <div class="strengths-carousel">
-                    <div class="strengths-card">
-                        <p>Proficient in Java-based backend development using Spring Boot and microservices architecture.</p>
-                    </div>
-                    <div class="strengths-card">
-                        <p>Skilled in cloud technologies and DevOps, with hands-on experience in Azure DevOps, Docker, and Kubernetes.</p>
-                    </div>
-                    <div class="strengths-card">
-                        <p>Expertise in optimizing APIs and RESTful services to enhance performance and reduce response times.</p>
-                    </div>
-                    <div class="strengths-card">
-                        <p>Strong experience in database optimization and management, particularly with PostgreSQL, to improve system efficiency.</p>
-                    </div>
-                    <div class="strengths-card">
-                        <p>Demonstrated leadership in code review processes, ensuring alignment with best practices and project goals.</p>
-                    </div>
-                    <div class="strengths-card">
-                        <p>Committed to Agile methodologies, actively participating in Scrum and continuous integration/delivery to streamline development cycles.</p>
-                    </div>
-                    <div class="strengths-card">
-                        <p>Effective collaborator with a focus on inclusivity and teamwork, fostering a supportive and innovative work environment.</p>
-                    </div>
-                    <div class="strengths-card">
-                        <p>Proven track record of implementing security measures, including Spring Security, JWT, and OAuth for robust authentication.</p>
-                    </div>
-                    <div class="strengths-card">
-                        <p>Adept at innovative problem-solving, successfully integrating new technologies to enhance user experience and operational efficiency.</p>
-                    </div>
-                    <div class="strengths-card">
-                        <p>Strong sense of responsibility and accountability, consistently delivering reliable, high-quality solutions while adhering to project timelines.</p>
-                    </div>
-                    <div class="strengths-card">
-                        <p>Practiced Test-Driven Development (TDD) and Behavior-Driven Development (BDD) to ensure robust and reliable software solutions.</p>
-                    </div>
-                    <div class="strengths-card">
-                        <p>Advocated for inclusivity and diversity within the team, contributing to a supportive and innovative work environment.</p>
+            
+            <div class="slideshow-container">
+                <div class="mySlides">
+                    <div id="slide-container">
                     </div>
                 </div>
             </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(0)"></span> 
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+              <span class="dot" onclick="currentSlide(4)"></span> 
+              <span class="dot" onclick="currentSlide(5)"></span> 
+              <span class="dot" onclick="currentSlide(6)"></span> 
+              <span class="dot" onclick="currentSlide(7)"></span> 
+              <span class="dot" onclick="currentSlide(8)"></span> 
+              <span class="dot" onclick="currentSlide(9)"></span> 
+              <span class="dot" onclick="currentSlide(10)"></span> 
+              <span class="dot" onclick="currentSlide(11)"></span> 
+            </div>
+        </div>            
         </section>
         
         
@@ -1396,7 +1469,62 @@ header {
     </footer>
 
     <script>
-       
+
+let slideIndex = 0;
+let pauseDuration = 3000;  // Time for reading content (5 seconds)
+
+// Array of content (text or HTML) for each slide
+const slidesContent = [
+  "Proficient in Java-based backend development using Spring Boot and microservices architecture.",
+  "Skilled in cloud technologies and DevOps, with hands-on experience in Azure DevOps, Docker, and Kubernetes.",
+    "Expertise in optimizing APIs and RESTful services to enhance performance and reduce response times.",
+    "Strong experience in database optimization and management, particularly with PostgreSQL, to improve system efficiency.",
+    
+    "Demonstrated leadership in code review processes, ensuring alignment with best practices and project goals.",
+    
+    "Committed to Agile methodologies, actively participating in Scrum and continuous integration/delivery to streamline development cycles.",
+    
+    "Effective collaborator with a focus on inclusivity and teamwork, fostering a supportive and innovative work environment.",
+    
+    "Proven track record of implementing security measures, including Spring Security, JWT, and OAuth for robust authentication.",
+    
+    "Advocated for inclusivity and diversity within the team, contributing to a supportive and innovative work environment.",
+    
+    "Adept at innovative problem-solving, successfully integrating new technologies to enhance user experience and operational efficiency.",
+    
+    "Strong sense of responsibility and accountability, consistently delivering reliable, high-quality solutions while adhering to project timelines.",
+    
+    "Practiced Test-Driven Development (TDD) and Behavior-Driven Development (BDD) to ensure robust and reliable software solutions."
+];
+
+function showSlides() {
+  let slideContainer = document.getElementById("slide-container");  // The container for slide content
+  let dots = document.getElementsByClassName("dot");
+
+  // Loop back to the first slide if we exceed the number of slides
+  if (slideIndex >= slidesContent.length) {
+    slideIndex = 0;
+  }
+
+  // Update the content of the slide container
+  slideContainer.innerHTML = slidesContent[slideIndex];
+
+  // Update the "active" dot
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  dots[slideIndex].className += " active";
+
+  // Increment the slide index for the next transition
+  slideIndex++;
+
+  // Automatically move to the next slide after the pause duration
+  setTimeout(showSlides, pauseDuration);
+}
+
+// Initialize the slideshow
+showSlides();
+
         document.querySelectorAll('.read-more-btn').forEach(button => {
             button.addEventListener('click', function() {
                 const card = this.closest('.project-card');
@@ -1452,8 +1580,6 @@ header {
 
         
     </script>
-
-
 
 
     <!-- JS and Libraries -->
