@@ -44,6 +44,17 @@ header {
     background-size: cover;
 }
 
+.profile-banner{
+    width: 100%;
+    margin: auto;
+    height: 40px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+}
+
 .header-content {
     display: flex;
     flex-direction: column;
@@ -51,6 +62,7 @@ header {
     justify-content: center;
     height: 100%;
 }
+
 
 .profile-photo {
     margin-bottom: 1rem;
@@ -115,15 +127,17 @@ header {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
-    background-color: black;
+    background-color: black; 
     color: white;
     border-radius: 20px;
     text-decoration: none;
     font-size: 1rem;
 }
 
+
 .contact-link:hover {
-    background-color: #0056b3;
+    color: #0056b3;
+    background-color: white;
 }
 
         .container {
@@ -224,7 +238,6 @@ header {
     padding: 2rem;
     text-align: center;
     border-radius: 8px;
-    margin: 2rem 0;
 }
 
 .summary-section h2 {
@@ -356,8 +369,13 @@ header {
 
 .tech-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(88, 91, 247, 0.2);
+    border: 1px solid transparent; /* Make border transparent for gradient effect */
+    background:
+        linear-gradient(white, white) padding-box, /* Inner background */
+        linear-gradient(90deg, rgb(6, 120, 243) 0%, rgba(0,169,224,1) 50%, rgba(51,0,114,1) 100%) border-box; /* Gradient border */
 }
+
 
 /* Style for card headings */
 .tech-card h3 {
@@ -528,7 +546,7 @@ header {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background-color: #00796b; /* Dark teal background */
+    background-color: #270ca0; /* Dark teal background */
     color: white;
     font-size: 1.5em;
     font-weight: bold;
@@ -541,14 +559,14 @@ header {
 
 .contact-section {
     padding: 40px 20px;
-    background-color: #f0f0f0;
+    background-color: #3E2AD3;
     text-align: center;
 }
 
 .contact-section h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #333;
+    color: white;
 }
 
 .contact-info {
@@ -567,11 +585,11 @@ header {
 
 .contact-icon {
     font-size: 1.5em;
-    color: #00796b; /* Dark teal color for the icons */
+    color: white; /* Dark teal color for the icons */
 }
 
 .contact-details {
-    color: #333;
+    color: white;
     text-decoration: none; /* Remove underline from links */
 }
 
@@ -609,7 +627,7 @@ header {
 .circular-progress {
     width: 150px;
     height: 150px;
-    background: conic-gradient(#4caf50 calc(106 / 150 * 360deg), #d3d3d3 0deg);
+    background: conic-gradient(#007bff calc(106 / 150 * 360deg), #d3d3d3 0deg);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -629,7 +647,7 @@ header {
 .progress-value {
     position: relative;
     font-size: 2.5em;
-    color: #4caf50;
+    color: #007bff;
     font-weight: bold;
 }
 
@@ -691,7 +709,7 @@ header {
 }
 
 .leetcode-dialogue span {
-    color: #4caf50;
+    color: #007bff;
     font-style: italic;
 }
 
@@ -797,11 +815,18 @@ header {
             padding: 2rem;
             border-radius: 10px;
             margin-top: 2rem;
+            align-items: center;
+            justify-content: center;
+           
         }
 
         .testimonials h3 {
             font-size: 1.8rem;
             margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
         }
 
         .testimonial-item {
@@ -810,6 +835,9 @@ header {
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             margin-bottom: 1rem;
+            width: 70%;
+            margin: auto;
+            margin-bottom: 10px;
         }
 
         .testimonial-item p {
@@ -825,7 +853,7 @@ header {
 
         footer {
             text-align: center;
-            background: #007bff;
+            background: #00072D;
             color: #fff;
             padding: 1rem 0;
         }
@@ -839,7 +867,7 @@ header {
 
         .mySlides {
   display: flex;
-  background-color: #e0f7fa;
+  background-color: white;
   border-radius: 20px;
   height: max-content;
   align-items: center;
@@ -972,8 +1000,7 @@ header {
         <div class="header-content">
             <div class="profile-banner">
                 <div class="profile-banner-left">
-                </div>
-                <div class="profile-banner-right">
+                    Portfolio
                 </div>
             </div>
             <div class="profile-photo">
@@ -1450,24 +1477,24 @@ header {
     </section>
 
     
+    
         
-        
-
-        <!-- Testimonials Section -->
-        <section class="testimonials" data-aos="fade-up" data-aos-delay="400">
-            <h3>Testimonials</h3>
-
-            <div class="testimonial-item">
-                <p>"Ajas is Technically skilled for his experience a quick learner based on the requirement and an excellent team player. The course of time during which I worked with Ajas was great and wish him best for his future endeavours."</p>
-                <h4>Vineet G Nair, Lead Software Engineer at H&R Block</h4>
-            </div>
-
-            <div class="testimonial-item">
-                <p>"Ajas is a fast learner and enthusiastic person.His problem solving skill is exceptionally well. I have had a great time working with Ajas."</p>
-                <h4>Mila Stephen, Software Developer at MiClub - PA, Werth</h4>
-            </div>
-        </section>
     </div>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" data-aos="fade-up" data-aos-delay="400">
+        <h3>Testimonials</h3>
+
+        <div class="testimonial-item">
+            <p>"Ajas is Technically skilled for his experience a quick learner based on the requirement and an excellent team player. The course of time during which I worked with Ajas was great and wish him best for his future endeavours."</p>
+            <h4>Vineet G Nair, Lead Software Engineer at H&R Block</h4>
+        </div>
+
+        <div class="testimonial-item">
+            <p>"Ajas is a fast learner and enthusiastic person.His problem solving skill is exceptionally well. I have had a great time working with Ajas."</p>
+            <h4>Mila Stephen, Software Developer at MiClub - PA, Werth</h4>
+        </div>
+    </section>
         <section class="contact-section">
             <h2>Contact Me</h2>
             <div class="contact-info">
